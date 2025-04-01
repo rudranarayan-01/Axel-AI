@@ -6,8 +6,8 @@ from ultralytics import YOLO
 # Initialize YOLO model
 model = YOLO('best (2).pt')  # Path to your trained model
 
-# Initialize serial communication with Arduino
-arduino = serial.Serial('COM5', 9600)  # Adjust COM port if necessary
+# Initialize serial communication with ESP
+# ser = serial.Serial('/dev/ttyUSB1', 9600, timeout=1)  # Adjust COM port if necessary
 
 def detect_traffic_sign(frame):
     results = model(frame)
@@ -26,13 +26,13 @@ def detect_traffic_sign(frame):
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
                 print(class_name)
 
-                # Send data to Arduino based on traffic sign
-                if class_name.lower() == 'red-lights':
-                    arduino.write(b'R')
-                elif class_name.lower() == 'yellow-lights':
-                    arduino.write(b'Y')
-                elif class_name.lower() == 'green-lights':
-                    arduino.write(b'G')
+                # # Send data to ESP based on traffic sign
+                # if class_name.lower() == 'red-lights':
+                #     ser.write(b'R')
+                # elif class_name.lower() == 'yellow-lights':
+                #     ser.write(b'Y')
+                # elif class_name.lower() == 'green-lights':
+                #     ser.write(b'G')
 
     return frame
 
