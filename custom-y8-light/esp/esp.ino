@@ -1,4 +1,4 @@
-void setup() {
+nvoid setup() {
     Serial.begin(115200);  
     pinMode(13, OUTPUT);  // Red light
     pinMode(12, OUTPUT); // Yellow light
