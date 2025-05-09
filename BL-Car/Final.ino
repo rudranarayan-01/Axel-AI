@@ -130,10 +130,11 @@ void moveBackward() {
 }
 
 void moveLeft() {
-  digitalWrite(motor1Pin1, LOW);
-  digitalWrite(motor1Pin2, HIGH);
+  digitalWrite(motor1Pin1, HIGH);
+  digitalWrite(motor1Pin2, LOW);
   digitalWrite(motor2Pin1, LOW);
   digitalWrite(motor2Pin2, LOW);
+
   digitalWrite(leftled, HIGH);
   digitalWrite(rightled, LOW);
   digitalWrite(forwardled, LOW);
@@ -146,6 +147,7 @@ void moveRight() {
   digitalWrite(motor1Pin2, LOW);
   digitalWrite(motor2Pin1, HIGH);
   digitalWrite(motor2Pin2, LOW);
+
   digitalWrite(rightled, HIGH);
   digitalWrite(leftled, LOW);
   digitalWrite(forwardled, LOW);
