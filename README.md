@@ -1,4 +1,4 @@
-# 🚗 Self-Driving Car Project
+# 🚗 Autonomous Car Prototype using Deep learning and Computer Vision
 
 This project demonstrates a mini self-driving car system built using Raspberry Pi 4, ESP32, and multiple AI-based modules for real-time perception, control, and monitoring. The system integrates Computer Vision, IoT, and ML to simulate real-world autonomous driving features such as lane detection, traffic sign recognition, obstacle avoidance, and more.
 
